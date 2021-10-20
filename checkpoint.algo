@@ -1,0 +1,75 @@
+/* ALGO Function */
+
+PROCEDURE dot_product_process(ps: INTEGER; V1,V2:ARRAY_OF INTEGER [];)
+VAR
+    i,j,n : INTEGER ;
+BEGIN
+    write("Veuillez entrez vos vecteurs")
+    read (V1 et V2)
+    
+    FOR i from 0 to n DO
+        FOR j FROM 0 TO n STEP 1  DO
+            read(v1[i]) , read(v2[j]) 
+            ps:= ps + (v1[i] * v2[j])
+        END_FOR   
+    END_FOR    
+        
+    write("le nombre est :"ps )
+END
+
+/* Deuxieme ALGO Function */
+
+
+FUNCTION dot_product_functon(ps;V1,V2:ARRAY_OF INTEGER):INTEGER
+
+VAR
+    i,j,n : INTEGER ;
+BEGIN
+    write("Veuillez entrez vos vecteurs")
+    read (V1 et V2)
+    
+    FOR i from 0 to n DO
+        FOR j FROM 0 TO n STEP 1  DO
+            read(v1[i]) , read(v2[j]) 
+            ps:= ps + v1[i]*v2[j]
+        END_FOR   
+    END_FOR    
+        
+    Return ps;
+END
+
+
+/* ALGORITHME QUI APPELE LA PROCEDURE */
+
+
+ALGORITHM Product_Scalaire_nul 
+
+VAR
+    i,j,n : INTEGER ;
+BEGIN
+    
+dot_product_process(ps, V1,V2)
+    IF ((v1[i] * v2[j]) = 0) THEN
+    ps:= 0 
+    END_IF
+        
+    write("les vecteurs sont orthogonaux") 
+END
+
+/* ALGO qui appele la Function */
+
+ALGORITHM Product_Scalaire_nul 
+
+VAR
+    i,j,n : INTEGER ;
+BEGIN
+    
+dot_product_functon(ps,V1,V2)
+    IF ((v1[i] * v2[j]) = 0) THEN
+    ps:= 0 
+    END_IF
+        
+    Return ps;    
+    write("les vecteurs sont orthogonaux") 
+END
+
