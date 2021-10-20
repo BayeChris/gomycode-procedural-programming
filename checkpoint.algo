@@ -4,11 +4,13 @@ PROCEDURE dot_product_process(ps: INTEGER; V1,V2:ARRAY_OF INTEGER [];)
 VAR
     i,j,n : INTEGER ;
 BEGIN
+    n := V1.length-1 
+    m := V2.length-1
     write("Veuillez entrez vos vecteurs")
     read (V1 et V2)
     
-    FOR i from 0 to n DO
-        FOR j FROM 0 TO n STEP 1  DO
+    FOR i from 0 to n-1 DO
+        FOR j FROM 0 TO m-1 STEP 1  DO
             read(v1[i]) , read(v2[j]) 
             ps:= ps + (v1[i] * v2[j])
         END_FOR   
@@ -25,11 +27,13 @@ FUNCTION dot_product_functon(ps;V1,V2:ARRAY_OF INTEGER):INTEGER
 VAR
     i,j,n : INTEGER ;
 BEGIN
+    n := V1.length-1 
+    m := V2.length-1
     write("Veuillez entrez vos vecteurs")
     read (V1 et V2)
     
-    FOR i from 0 to n DO
-        FOR j FROM 0 TO n STEP 1  DO
+    FOR i from 0 to n-1 DO
+        FOR j FROM 0 TO m-1 STEP 1  DO
             read(v1[i]) , read(v2[j]) 
             ps:= ps + v1[i]*v2[j]
         END_FOR   
